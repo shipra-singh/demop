@@ -8,9 +8,9 @@
 <script src="jquery-1.12.1.js"></script>
 <script>
    $(function(){
-    $(document).pjax({
-        area : '#main',
-        link : 'a.pjax'
+    $(document).pjax('a', '#pjax-container', { 
+        fragment: '#pjax-container', 
+        timeout: 3000 
     });
     $(document).on('pjax:send',function(){
      alert("loading");
@@ -20,8 +20,7 @@
 </head>
 <body>
 <p>basic pjax demo page</p>
-  <div >
-   <div id="main">
+   <div id="pjax-container">
   <ul>
    <li><a class="pjax"  href="page3.html">demo</a></li>
   <li><a class="pjax"  href="koala2.html">demo1</a></li>
