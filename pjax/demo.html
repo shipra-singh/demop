@@ -6,18 +6,21 @@
  <script src="jquery-1.12.1.js"></script>
 <script src="jquery.pjax.js"></script>
 <script>
-    $(function(){
-     $(document).pjax('ul a', '#main')
-    })
+   $(function(){
+    $.pjax({
+        area : '#content',
+        link : 'a.pjax'
+    });
+});
   </script>
 </head>
 <body>
 <p>basic pjax demo page</p>
 <div id="main">
   <ul>
-   <li><a href="page3.html">demo</a></li>
-  <li><a href="koala2.html">demo1</a></li>
-  <li><a href="image.html">demo2</a></li>
+   <li><a class="pjax"  href="page3.html">demo</a></li>
+  <li><a class="pjax"  href="koala2.html">demo1</a></li>
+  <li><a  class="pjax" href="image.html">demo2</a></li>
 </ul>
 </body>
 </html>
