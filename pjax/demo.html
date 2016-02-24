@@ -6,17 +6,11 @@
 
 <script src="jquery.pjax.js"></script>
 <script src="jquery-2.2.1.min.js"></script>
-<script>
-   $(function(){
-    $(document).pjax('a', '#pjax-container', { 
-        fragment: '#pjax-container', 
-        timeout: 3000 
-    });
-    $(document).on('pjax:send',function(){
-     alert("loading");
-    });
-});
-  </script>
+ <script type="text/javascript">
+            $(document).ready(function(){
+                $(document).pjax('a', '#pjax-container')
+            });
+        </script>
 </head>
 <body>
 <p>basic pjax demo page</p>
